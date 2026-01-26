@@ -5,18 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXP2 | Web Page Styling using CSS3 & Bootstrap</title>
     <link rel="stylesheet" type="text/css" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav>
-        hello
-    </nav>
-    <section>
-        <h1>The future of building happens together</h1>
-        <input type="email" placeholder="type your email">Signup For Github</input>
-    </section>
 
-    <section>
-        <h1>from section 2</h1>
-    </section>
+<body>
+
+  <header>
+    <div class="header-left">
+      <div class="logo">
+        <img src="./assets/logo.png" alt="GitHub">
+        GitHub
+      </div>
+      <nav class="nav-links">
+        <a href="#">Product</a>
+        <a href="#">Team</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Explore</a>
+        <a href="#">Marketplace</a>
+        <a href="#">Pricing</a>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <input type="search" class="search-box" placeholder="Search GitHub">
+      <a href="#" class="btn-link">Sign in</a>
+      <a href="#" class="btn-outline">Sign up</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Where the world builds software</h1>
+        <p>
+          Millions of developers and companies build, ship, and maintain their software on GitHub —
+          the largest and most advanced development platform in the world.
+        </p>
+
+        <div class="hero-form">
+          <input type="email" placeholder="Email address">
+          <button class="btn-green">Sign up for GitHub</button>
+          <button class="btn-dark">Try GitHub Copilot free</button>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="./assets/icons8-github-copilot-750.png" alt="GitHub Illustration">
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Why developers love GitHub</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3>Collaboration</h3>
+        <p>
+          Work together on code with pull requests, issues, and discussions.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚙️</div>
+        <h3>Automation</h3>
+        <p>
+          Build, test, and deploy your code with GitHub Actions.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Security</h3>
+        <p>
+          Keep your code safe with built-in security scanning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footerbig">
+    <div class="footer-info">
+      <div class="logo">
+        <img src="./assets/logo.png" alt="GitHub">
+        GitHub
+      </div>
+      <p>
+        GitHub is the world’s leading platform for developers to build,
+        collaborate, and ship software securely.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Product</h4>
+        <a href="#">Features</a>
+        <a href="#">Security</a>
+        <a href="#">Team</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Pricing</a>
+      </div>
+
+      <div>
+        <h4>Platform</h4>
+        <a href="#">Developer API</a>
+        <a href="#">GitHub CLI</a>
+        <a href="#">GitHub Desktop</a>
+        <a href="#">GitHub Mobile</a>
+      </div>
+
+      <div>
+        <h4>Support</h4>
+        <a href="#">Docs</a>
+        <a href="#">Community Forum</a>
+        <a href="#">Professional Services</a>
+        <a href="#">Status</a>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <footer class="footersmall">
+    © 2026 GitHub, Inc. · Terms · Privacy · <B>Made By Asaad Siddiqui</B>
+  </footer>
+
 </body>
 </html>
