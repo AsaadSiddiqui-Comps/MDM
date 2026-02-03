@@ -1,0 +1,4 @@
+This To-Do List application illustrates core web development principles by integrating HTML for structural layout, CSS for aesthetic styling, and JavaScript for dynamic functionality. The HTML establishes a simple interface with an input field for task entry and an unordered list to display tasks, while CSS applies a sleek dark theme with gradients, custom fonts, and interactive button effects to enhance user experience. JavaScript enables interactivity through DOM manipulation, allowing users to add tasks, mark them as complete (with strikethrough styling), and remove them, demonstrating event-driven programming and real-time UI updates without page reloads.
+
+Demo:
+[demo image](./assets/todo_list.jpeg)
