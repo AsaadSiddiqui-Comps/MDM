@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM manupilation and jquery | Exp4</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #000000;
+            font-size: 45px;
+            margin-bottom: 0px;
+        }
+        p {
+            color: #555555;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+        #card {
+            width: 250px;
+            padding: 15px;
+            background: lightgreen;
+            margin: 20px auto;
+            display: none;
+            border-radius: 10px;
+        }
+        #card:hover {
+            background: lightblue;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Info</h2>
+    <p>DOM manupilation and jquery | Exp4</p>
+
+    <input type="text" id="name" placeholder="Enter Student Name">
+    <input type="text" id="course" placeholder="Enter Course">
+    <br><br>
+
+    <button id="addBtn">Add Student</button>
+    <button id="hideBtn">Hide Card</button>
+    <button id="showBtn">Show Card</button>
+    <button id="toggleBtn">Toggle Card</button>
+    <button id="animateBtn">Animate Card</button>
+
+    <div id="card">
+        <h3 id="studentName"></h3>
+        <p id="studentCourse"></p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#addBtn").click(function(){
+                var name = $("#name").val();
+                var course = $("#course").val();
+
+                $("#studentName").text("Name: " + name);
+                $("#studentCourse").text("Course: " + course);
+
+                $("#card").fadeIn();
+            });
+
+            $("#hideBtn").click(function(){
+                $("#card").hide();
+            });
+
+            $("#showBtn").click(function(){
+                $("#card").show();
+            });
+
+            $("#toggleBtn").click(function(){
+                $("#card").toggle();
+            });
+
+            $("#animateBtn").click(function(){
+                $("#card").animate({
+                    width: "300px",
+                    height: "300px",
+                    opacity: 0.6
+                }, 1000);
+            });
+
+        });
+    </script>
+
+</body>
+</html>
