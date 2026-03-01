@@ -2,15 +2,109 @@
 <html>
 <head>
     <title>Weather App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e6ecff 0%, #83b5ff 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #74baf3 0%, #0084ff 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        #weatherResult {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #weatherResult h2 {
+            color: #02040c;
+            margin: 15px 0 10px 0;
+            font-size: 1.5rem;
+        }
+
+        #weatherResult p {
+            color: #555;
+            font-size: 1.1rem;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Weather App</h1>
+    <div class="container">
+        <h1>Weather App</h1>
 
-    <input type="text" id="cityInput" placeholder="Enter city name">
-    <button onclick="getWeather()">Get Weather</button>
+        <div class="input-group">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button onclick="getWeather()">Get Weather</button>
+        </div>
 
-    <div id="weatherResult"></div>
+        <div id="weatherResult"></div>
+    </div>
 
     <script>
       
@@ -23,7 +117,7 @@
     }
 
     try {
-        // 1️⃣ Get latitude & longitude from city name
+        //first take the city langitude and longitude
         const geoResponse = await fetch(
             `https://geocoding-api.open-meteo.com/v1/search?name=${city}`
         );
@@ -39,7 +133,7 @@
         const { latitude, longitude } = geoData.results[0];
         console.log(latitude)
 
-        // 2️⃣ Fetch weather data
+        //fetch weather data using the latitude and longitude
         const weatherResponse = await fetch(
             `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=relativehumidity_2m`
         );
@@ -51,7 +145,7 @@
         const windspeed = weatherData.current_weather.windspeed;
         const weatherCode = weatherData.current_weather.weathercode;
 
-        // 3️⃣ Update DOM dynamically
+        //update the page with the weather information
         document.getElementById("weatherResult").innerHTML = `
             <h2>Current Time ${currenttime}</h2>
             <h2>Weather in ${city}</h2>
