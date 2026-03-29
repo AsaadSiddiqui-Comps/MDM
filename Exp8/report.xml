@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="reportcard.xsl"?>
+
+<reportcard>
+    <student>
+        <name>Student1</name>
+        <subject>Mathematics</subject>
+        <marks>78</marks>
+    </student>
+    <student>
+        <name>Student2</name>
+        <subject>Science</subject>
+        <marks>32</marks>
+    </student>
+    <student>
+        <name>Student3</name>
+        <subject>English</subject>
+        <marks>55</marks>
+    </student>
+    <student>
+        <name>Student4</name>
+        <subject>History</subject>
+        <marks>28</marks>
+    </student>
+    <student>
+        <name>Student5</name>
+        <subject>Computer</subject>
+        <marks>91</marks>
+    </student>
+</reportcard>
