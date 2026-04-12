@@ -2,7 +2,7 @@
 Introduction to Web Technologies
 
 ## Author
-Asad Siddiqui
+Asaad Siddiqui
 
 ## Overview
 This repository includes multiple experimental projects (`Exp1` through `Exp9`) covering Git workflow, HTML/CSS, JavaScript, PHP, XML/XSL, and React Hooks.
@@ -17,6 +17,7 @@ This repository includes multiple experimental projects (`Exp1` through `Exp9`) 
 - `Exp7/` - PHP session and cookie management example (check `index..php` / `index.php`)
 - `Exp8/` - XML/XSL report transformation
 - `Exp9/` - React Hooks app with color selection and side effects (README included)
+- `Exp10/` - React weather app using Open-Meteo APIs and axios
 
 ## How to use
 Open each `ExpX/ReadMe.md` for local instructions, or run the relevant entry point in browser or local server.
